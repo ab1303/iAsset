@@ -2,7 +2,7 @@
 using StructureMap;
 
 
-namespace IAsset.Services
+namespace iAsset.Services
 {
     public class IoC
     {

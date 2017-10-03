@@ -16,9 +16,9 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using AutoMapper;
-using IAsset.WebApi.Mapping;
+using iAsset.WebApi.Mapping;
 using StructureMap;
-namespace IAsset.WebApi.DependencyResolution {
+namespace iAsset.WebApi.DependencyResolution {
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
 	

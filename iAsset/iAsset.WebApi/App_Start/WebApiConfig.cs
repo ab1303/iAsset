@@ -9,7 +9,7 @@ using System.Web.Http.Cors;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 
-namespace IAsset.WebApi
+namespace iAsset.WebApi
 {
     public static class WebApiConfig
     {

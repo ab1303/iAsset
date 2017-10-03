@@ -16,7 +16,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 using StructureMap;
 using StructureMap.Graph.Scanning;
-namespace IAsset.WebApi.DependencyResolution {
+namespace iAsset.WebApi.DependencyResolution {
     using System;
     using System.Web.Mvc;
     using StructureMap.Graph;

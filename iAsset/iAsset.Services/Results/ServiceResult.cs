@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IAsset.Services.Results
+namespace iAsset.Services.Results
 {
     public class ServiceResult
     {

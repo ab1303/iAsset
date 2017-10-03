@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace IAsset.WebApi.Models
+namespace iAsset.WebApi.Models
 {
     // Models returned by AccountController actions.
 

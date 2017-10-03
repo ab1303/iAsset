@@ -1,4 +1,4 @@
-namespace IAsset.WebApi.DependencyResolution {
+namespace iAsset.WebApi.DependencyResolution {
     using System.Web;
     using StructureMap.Web.Pipeline;
 

@@ -4,9 +4,9 @@ using System.Linq;
 //using Microsoft.Owin;
 //using Owin;
 
-//[assembly: OwinStartup(typeof(IAsset.WebApi.Startup))]
+//[assembly: OwinStartup(typeof(iAsset.WebApi.Startup))]
 
-//namespace IAsset.WebApi
+//namespace iAsset.WebApi
 //{
 //    public partial class Startup
 //    {

@@ -1,4 +1,4 @@
-namespace IAsset.WebApi.Areas.HelpPage.ModelDescriptions
+namespace iAsset.WebApi.Areas.HelpPage.ModelDescriptions
 {
     public class KeyValuePairModelDescription : ModelDescription
     {

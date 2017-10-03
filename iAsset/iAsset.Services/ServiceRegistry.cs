@@ -1,19 +1,17 @@
 ﻿using System;
-using IAsset.Data;
-using IAsset.Services.Implementations;
-using IAsset.Services.Interfaces;
+using iAsset.Services.Implementations;
+using iAsset.Services.Interfaces;
 using StructureMap;
 
-namespace IAsset.Services
+namespace iAsset.Services
 {
     public class ServicesRegistry : Registry
     {
         public ServicesRegistry(IoC container)
         {
 
-            For<IWeatherRepository>().Use<WeatherRepository>();
+            For<IWeatherService>().Use<WeatherService>();
 
-            IncludeRegistry(new DataRegistry());
             For<IoC>().Use(container);
         }
     }

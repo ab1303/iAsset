@@ -1,4 +1,4 @@
-namespace IAsset.WebApi.Areas.HelpPage
+namespace iAsset.WebApi.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

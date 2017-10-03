@@ -59,11 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\CityXmlDocument.cs" />
     <Compile Include="DTO\WeatherDto.cs" />
-    <Compile Include="Implementations\WeatherRepository.cs" />
-    <Compile Include="Interfaces\IDataRepository.cs" />
-    <Compile Include="Interfaces\IWeatherRepository.cs" />
+    <Compile Include="Implementations\WeatherService.cs" />
+    <Compile Include="Interfaces\IWeatherService.cs" />
     <Compile Include="IoC.cs" />
+    <Compile Include="Results\CountryCityResult.cs" />
     <Compile Include="Service References\GlobalWeather\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,12 +78,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Service References\GlobalWeather\globalweather.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\iAsset.Data\iAsset.Data.csproj">
-      <Project>{cf6cda63-5ddc-499d-8128-883d99ed7ec5}</Project>
-      <Name>SecureCo.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -102,6 +97,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

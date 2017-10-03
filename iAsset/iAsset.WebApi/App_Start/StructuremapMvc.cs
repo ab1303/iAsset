@@ -16,17 +16,17 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Web.Mvc;
-using IAsset.WebApi;
-using IAsset.WebApi.DependencyResolution;
+using iAsset.WebApi;
+using iAsset.WebApi.DependencyResolution;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using StructureMap;
 using WebActivatorEx;
-using IAsset.Services;
+using iAsset.Services;
 
 [assembly: PreApplicationStartMethod(typeof(StructuremapMvc), "Start")]
 [assembly: ApplicationShutdownMethod(typeof(StructuremapMvc), "End")]
 
-namespace IAsset.WebApi {
+namespace iAsset.WebApi {
     public static class StructuremapMvc {
         #region Public Properties
 
@@ -45,8 +45,8 @@ namespace IAsset.WebApi {
 
             var registry = new Registry();
             registry.IncludeRegistry(new DefaultRegistry());
-            registry.IncludeRegistry(new ServicesRegistry(IAsset.Services.IoC.GetInstance()));
-            var container = IAsset.Services.IoC.GetInstance().Initialize(registry);
+            registry.IncludeRegistry(new ServicesRegistry(iAsset.Services.IoC.GetInstance()));
+            var container = iAsset.Services.IoC.GetInstance().Initialize(registry);
 
 
             //IContainer container = IoC.Initialize();

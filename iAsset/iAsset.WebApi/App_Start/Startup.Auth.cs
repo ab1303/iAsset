@@ -8,10 +8,10 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using IAsset.WebApi.Providers;
-using IAsset.WebApi.Models;
+using iAsset.WebApi.Providers;
+using iAsset.WebApi.Models;
 
-namespace IAsset.WebApi
+namespace iAsset.WebApi
 {
     public partial class Startup
     {

@@ -16,7 +16,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 
-namespace IAsset.WebApi.DependencyResolution {
+namespace iAsset.WebApi.DependencyResolution {
     using StructureMap;
 	
     //public static class IoC {

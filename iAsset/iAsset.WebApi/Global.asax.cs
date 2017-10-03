@@ -6,10 +6,10 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using IAsset.WebApi.Mapping;
+using iAsset.WebApi.Mapping;
 using StructureMap.Web.Pipeline;
 
-namespace IAsset.WebApi
+namespace iAsset.WebApi
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

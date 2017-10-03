@@ -18,7 +18,7 @@
 using System.Web.Http.Dependencies;
 using StructureMap;
 
-namespace IAsset.WebApi.DependencyResolution
+namespace iAsset.WebApi.DependencyResolution
 {
     /// <summary>
     /// The structure map dependency resolver.

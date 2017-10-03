@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using IAsset.WebApi.Areas.HelpPage.ModelDescriptions;
-using IAsset.WebApi.Areas.HelpPage.Models;
+using iAsset.WebApi.Areas.HelpPage.ModelDescriptions;
+using iAsset.WebApi.Areas.HelpPage.Models;
 
-namespace IAsset.WebApi.Areas.HelpPage.Controllers
+namespace iAsset.WebApi.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

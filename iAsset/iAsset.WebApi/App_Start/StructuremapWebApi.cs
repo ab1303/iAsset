@@ -16,12 +16,12 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Web.Http;
-using IAsset.WebApi;
-using IAsset.WebApi.DependencyResolution;
+using iAsset.WebApi;
+using iAsset.WebApi.DependencyResolution;
 
 [assembly: WebActivatorEx.PostApplicationStartMethod(typeof(StructuremapWebApi), "Start")]
 
-namespace IAsset.WebApi {
+namespace iAsset.WebApi {
     public static class StructuremapWebApi {
         public static void Start() {
 			var container = StructuremapMvc.StructureMapDependencyScope.Container;

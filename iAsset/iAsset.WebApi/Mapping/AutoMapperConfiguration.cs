@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace IAsset.WebApi.Mapping
+namespace iAsset.WebApi.Mapping
 {
     public static class AutoMapperConfiguration
     {

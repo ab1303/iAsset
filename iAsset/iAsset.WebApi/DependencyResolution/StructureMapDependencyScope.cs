@@ -15,7 +15,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace IAsset.WebApi.DependencyResolution {
+namespace iAsset.WebApi.DependencyResolution {
     using System;
     using System.Collections.Generic;
     using System.Linq;

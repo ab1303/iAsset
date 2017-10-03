@@ -1,4 +1,4 @@
-﻿namespace IAsset.WebApi.Models
+﻿namespace iAsset.WebApi.Models
 {
     /// <summary>
     /// Base Api Response, including the message to be sent back over the pipeline
