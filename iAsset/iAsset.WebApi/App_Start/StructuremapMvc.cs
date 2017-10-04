@@ -15,6 +15,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Configuration;
 using System.Web.Mvc;
 using iAsset.WebApi;
 using iAsset.WebApi.DependencyResolution;
@@ -42,11 +43,15 @@ namespace iAsset.WebApi {
 		
         public static void Start() {
 
+            var soapEndpointName = ConfigurationManager.AppSettings["gw:soap-endpoint-name"];
+            var openWeatherMapUrl = ConfigurationManager.AppSettings["owm:url"];
+            var openWeatherMapAppId = ConfigurationManager.AppSettings["owm:appid"];
+
 
             var registry = new Registry();
             registry.IncludeRegistry(new DefaultRegistry());
-            registry.IncludeRegistry(new ServicesRegistry(iAsset.Services.IoC.GetInstance()));
-            var container = iAsset.Services.IoC.GetInstance().Initialize(registry);
+            registry.IncludeRegistry(new ServicesRegistry(IoC.GetInstance(), soapEndpointName, openWeatherMapUrl, openWeatherMapAppId));
+            var container = IoC.GetInstance().Initialize(registry);
 
 
             //IContainer container = IoC.Initialize();

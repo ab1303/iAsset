@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>iAsset.Services</RootNamespace>
     <AssemblyName>iAsset.Services</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +43,10 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="StructureMap, Version=4.4.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\StructureMap.4.4.5\lib\net45\StructureMap.dll</HintPath>
       <Private>True</Private>
@@ -64,6 +69,14 @@
     <Compile Include="Implementations\WeatherService.cs" />
     <Compile Include="Interfaces\IWeatherService.cs" />
     <Compile Include="IoC.cs" />
+    <Compile Include="Model\Clouds.cs" />
+    <Compile Include="Model\Coordinate.cs" />
+    <Compile Include="Model\Main.cs" />
+    <Compile Include="Model\Sys.cs" />
+    <Compile Include="Model\Weather.cs" />
+    <Compile Include="Model\WeatherResponse.cs" />
+    <Compile Include="Model\Wind.cs" />
+    <Compile Include="Results\WeatherResult.cs" />
     <Compile Include="Results\CountryCityResult.cs" />
     <Compile Include="Service References\GlobalWeather\Reference.cs">
       <AutoGen>True</AutoGen>
