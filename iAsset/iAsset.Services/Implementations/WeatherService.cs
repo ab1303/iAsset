@@ -79,8 +79,7 @@ namespace iAsset.Services.Implementations
                     if (weatherResponse == null)
                         return new WeatherResult
                         {
-                            Status = ServiceStatus.Success,
-                            CityWeather = weatherCondition
+                            Exception = new InvalidDataException("Response to api call is not valid")
                         };
 
                     weatherCondition.Location = weatherResponse.Name;
