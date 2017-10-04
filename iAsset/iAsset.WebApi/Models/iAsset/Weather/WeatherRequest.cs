@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace iAsset.WebApi.Models.Weather
+﻿namespace iAsset.WebApi.Models.iAsset.Weather
 {
     public class WeatherRequest
     {

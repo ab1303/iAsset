@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using iAsset.WebApi.Models;
+﻿using System.Collections.Generic;
 
-namespace iAsset.WebApi.Models
+namespace iAsset.WebApi.Models.iAsset
 {
     /// <summary>
     /// A Country Response Object
