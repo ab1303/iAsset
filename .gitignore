@@ -4,6 +4,8 @@ iAsset/iAsset.Data/bin/
 iAsset/iAsset.Data/obj/
 iAsset/iAsset.Services/bin/
 iAsset/iAsset.Services/obj/
+iAsset/iAsset.Services.Tests/bin/
+iAsset/iAsset.Services.Tests/obj/
 iAsset/packages/
 iAsset/iAsset.v12.suo
 
