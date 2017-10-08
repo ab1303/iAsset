@@ -1,9 +1,18 @@
 ﻿namespace iAsset.WebApi.Models.iAsset.Weather
 {
+    /// <summary>
+    /// Weather Request
+    /// </summary>
     public class WeatherRequest
     {
-        public string CountryName { get; set; }
-        public string CityName { get; set; }
+        /// <summary>
+        /// Country name parameter
+        /// </summary>
+        public string Country { get; set; }
+        /// <summary>
+        /// City name parameter
+        /// </summary>
+        public string City { get; set; }
 
     }
 }

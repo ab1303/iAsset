@@ -40,13 +40,7 @@ namespace iAsset.WebApi
             var cors = new EnableCorsAttribute("http://localhost:60986", "*", "*");
             config.EnableCors(cors);
 
-
-            config.Routes.MapHttpRoute(
-                name: "ProjectContactsApi",
-                routeTemplate: "api/projects/{projectId}/contacts/{id}",
-                defaults: new { controller = "projectContacts", id = RouteParameter.Optional }
-            );
-
+          
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

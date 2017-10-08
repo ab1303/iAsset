@@ -15,7 +15,7 @@ namespace iAsset.WebApi.Mapping
         {
             _mapperConfiguration = new MapperConfiguration(config =>
             {
-                config.AddProfile<SecureCoProfile>();
+               // config.AddProfile<T>();
             });
             _mapperConfiguration.AssertConfigurationIsValid();
         }

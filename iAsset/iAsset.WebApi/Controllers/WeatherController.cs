@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
 using AutoMapper;
@@ -13,7 +15,7 @@ namespace iAsset.WebApi.Controllers
     /// <summary>
     /// Weather Controller
     /// </summary>
-    [RoutePrefix("v1/Country")]
+    [RoutePrefix("api/v1")]
     public class WeatherController : ApiController
     {
         private readonly IWeatherService _weatherService;
@@ -33,10 +35,16 @@ namespace iAsset.WebApi.Controllers
 
         // GET: api/country/Australia
 
-        [HttpGet]
+        /// <summary>
+        /// Get list of cities by country name
+        /// </summary>
+        /// <param name="country"></param>
+        /// <returns></returns>
+        //[HttpGet]
         [AcceptVerbs("GET")]
         [Route("{country}/cities")]
         [ResponseType(typeof(CountryCityResponse))]
+
         public HttpResponseMessage Get(string country)
         {
 
@@ -64,7 +72,7 @@ namespace iAsset.WebApi.Controllers
 
                 countryResposne.Cities = result.Cities;
                 countryResposne.Code = InternalApiStatusCode.Success;
-                countryResposne.Message = "cheque item added";
+                countryResposne.Message = "list of cities retrieved";
 
 
                 return Request.CreateResponse(HttpStatusCode.OK, countryResposne);
@@ -78,14 +86,18 @@ namespace iAsset.WebApi.Controllers
 
 
 
-        [HttpGet]
+        /// <summary>
+        /// Get the weather condition of a particular city of a country
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [AcceptVerbs("GET")]
         [Route("{country}/{city}/weather")]
         [ResponseType(typeof(WeatherResponse))]
-        public HttpResponseMessage Get([FromBody] WeatherRequest request)
+        public HttpResponseMessage Get([FromUri] WeatherRequest request)
         {
 
-            if (string.IsNullOrEmpty(request.CountryName) || string.IsNullOrWhiteSpace(request.CountryName))
+            if (string.IsNullOrEmpty(request.Country) || string.IsNullOrWhiteSpace(request.Country))
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest, new BaseApiResponse
                 {
@@ -94,7 +106,7 @@ namespace iAsset.WebApi.Controllers
                 });
             }
 
-            if (string.IsNullOrEmpty(request.CityName) || string.IsNullOrWhiteSpace(request.CityName))
+            if (string.IsNullOrEmpty(request.City) || string.IsNullOrWhiteSpace(request.City))
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest, new BaseApiResponse
                 {
@@ -103,11 +115,28 @@ namespace iAsset.WebApi.Controllers
                 });
             }
 
+            var countryCityResposne = new CountryCityResponse();
+            var countryCityResult = _weatherService.GetCities(request.Country);
+
+            if (!countryCityResult.IsSuccess)
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new BaseApiResponse
+                {
+                    Code = InternalApiStatusCode.Error,
+                    Message = "Failed to fetch cities"
+                });
+
+            if (!countryCityResult.Cities.Any(c => c.Equals(request.City)))
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new BaseApiResponse
+                {
+                    Code = InternalApiStatusCode.Error,
+                    Message = "City doesn't below to this country"
+                });
+
 
             var weatherResposne = new WeatherResponse();
             try
             {
-                var result = _weatherService.GetCityWeather(request.CityName);
+                var result = _weatherService.GetCityWeather(request.City);
 
                 if (!result.IsSuccess)
                     return Request.CreateResponse(HttpStatusCode.InternalServerError, new BaseApiResponse
@@ -118,7 +147,7 @@ namespace iAsset.WebApi.Controllers
 
                 weatherResposne.Weather = result.CityWeather;
                 weatherResposne.Code = InternalApiStatusCode.Success;
-                weatherResposne.Message = "cheque item added";
+                weatherResposne.Message = "City weather condition";
 
 
                 return Request.CreateResponse(HttpStatusCode.OK, weatherResposne);

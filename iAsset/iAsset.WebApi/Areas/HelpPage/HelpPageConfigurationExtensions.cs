@@ -13,6 +13,7 @@ using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using iAsset.WebApi.Areas.HelpPage.ModelDescriptions;
 using iAsset.WebApi.Areas.HelpPage.Models;
+using iAsset.WebApi.Areas.HelpPage.SampleGeneration;
 
 namespace iAsset.WebApi.Areas.HelpPage
 {

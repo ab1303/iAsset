@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iAsset.WebApi", "iAsset.WebApi\iAsset.WebApi.csproj", "{02328D7F-29DA-454B-8079-A6CB20C37067}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iAsset.Services", "iAsset.S
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "iAsset.Web", "..\iAsset.Web\", "{9999B652-29F1-4908-8E72-9D1D979C1E35}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_60986"
 		Debug.AspNetCompiler.PhysicalPath = "..\iAsset.Web\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60986\"
