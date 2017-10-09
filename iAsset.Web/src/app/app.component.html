@@ -12,10 +12,20 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3">                            
-                            
+                        <div class="col-sm-6 col-sm-offset-3">
+                                <div class="form-group">
+                                    <label for="countryName">Country Name:</label>
+                                    <input  [ngModel]="countryName" (ngModelChange)="countryName = $event" name="countryName" id="countryName" type="text" class="form-control" placeholder="Country Name" />
+                                </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <button type="button" [disabled]="!countryName.length" class="btn btn-primary" (click)="getCities()">Display Cities</button>
+                        </div>
+                    </div>
+                    
+
                 </div>
             </div>
 

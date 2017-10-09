@@ -1,3 +1,4 @@
 export const API = {
-    baseUrl: ""
+    baseUrl: "http://localhost:55920/api/v1"   
 }
+
